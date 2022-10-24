@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String buttonText = button.getText().toString();
 
         if (buttonText.equals("calendar")) {
-            Intent myIntent=new Intent(getBaseContext(), Calendar.class);
+            Intent myIntent=new Intent(getBaseContext(), CalendarQuickstart.class);
             startActivity(myIntent);
             return;
         }

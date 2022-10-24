@@ -58,7 +58,7 @@
         android:layout_height="0dp"
         android:layout_marginBottom="40dp"
         android:backgroundTint="#987554"
-        android:text="Calendar"
+        android:text="calendar"
         android:textSize="17dp"
         app:layout_constraintBottom_toTopOf="@+id/map"
         app:layout_constraintEnd_toEndOf="parent"

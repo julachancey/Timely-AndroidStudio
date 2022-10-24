@@ -37,8 +37,27 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="${MAPS_API_KEY}" />
 
+        <meta-data
+            android:name="com.google.android.calendar.API_KEY"
+            android:value="${CALENDAR_OAUTH}" />
+
         <activity
-            android:name=".Calendar"
+            android:name=".CalendarQuickstart"
+            android:exported="false" />
+        <activity
+            android:name=".CalendarUtils"
+            android:exported="false" />
+        <activity
+            android:name=".Event"
+            android:exported="false" />
+        <activity
+            android:name=".EventEditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HourEvent"
+            android:exported="false" />
+        <activity
+            android:name=".HourAdapter"
             android:exported="false" />
         <activity
             android:name=".MapsActivity"
