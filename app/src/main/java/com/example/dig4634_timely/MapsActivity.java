@@ -2,6 +2,8 @@ package com.example.dig4634_timely;
 
 import androidx.fragment.app.FragmentActivity;
 
+import android.location.Location;
+import android.location.LocationManager;
 import android.os.Bundle;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -11,6 +13,8 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.example.dig4634_timely.databinding.ActivityMapsBinding;
+
+import java.util.ArrayList;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -43,9 +47,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(29.6505, -82.3334);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Gainesville"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        ArrayList<Event> eventsList = com.example.dig4634_timely.Event.eventsList;
+        for (com.example.dig4634_timely.Event event : eventsList) {
+
+            LatLng dest =new LatLng(event.getLat(), event.getLon());
+            mMap.addMarker(new MarkerOptions().position(dest).title(event.getName()));
+            mMap.moveCamera(CameraUpdateFactory.newLatLng(dest));
+
+        }
     }
 }

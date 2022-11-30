@@ -6,13 +6,13 @@ import java.util.ArrayList;
 
 public class Event
 {
-    public static ArrayList<Event> eventsList = new ArrayList<>();
+    public static ArrayList<com.example.dig4634_timely.Event> eventsList = new ArrayList<>();
 
-    public static ArrayList<Event> eventsForDate(LocalDate date)
+    public static ArrayList<com.example.dig4634_timely.Event> eventsForDate(LocalDate date)
     {
-        ArrayList<Event> events = new ArrayList<>();
+        ArrayList<com.example.dig4634_timely.Event> events = new ArrayList<>();
 
-        for(Event event : eventsList)
+        for(com.example.dig4634_timely.Event event : eventsList)
         {
             if(event.getDate().equals(date))
                 events.add(event);
@@ -21,11 +21,11 @@ public class Event
         return events;
     }
 
-    public static ArrayList<Event> eventsForDateAndTime(LocalDate date, LocalTime time)
+    public static ArrayList<com.example.dig4634_timely.Event> eventsForDateAndTime(LocalDate date, LocalTime time)
     {
-        ArrayList<Event> events = new ArrayList<>();
+        ArrayList<com.example.dig4634_timely.Event> events = new ArrayList<>();
 
-        for(Event event : eventsList)
+        for(com.example.dig4634_timely.Event event : eventsList)
         {
             int eventHour = event.time.getHour();
             int cellHour = time.getHour();
@@ -40,12 +40,16 @@ public class Event
     private String name;
     private LocalDate date;
     private LocalTime time;
+    private Double lat;
+    private Double lon;
 
-    public Event(String name, LocalDate date, LocalTime time)
+    public Event(String name, LocalDate date, LocalTime time, Double lat, Double lon)
     {
         this.name = name;
         this.date = date;
         this.time = time;
+        this.lat = lat;
+        this.lon = lon;
     }
 
     public String getName()
@@ -61,6 +65,16 @@ public class Event
     public LocalDate getDate()
     {
         return date;
+    }
+
+    public Double getLon()
+    {
+        return lon;
+    }
+
+    public Double getLat()
+    {
+        return lat;
     }
 
     public void setDate(LocalDate date)

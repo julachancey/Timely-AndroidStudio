@@ -6,9 +6,9 @@ import java.util.ArrayList;
 class HourEvent
 {
     LocalTime time;
-    ArrayList<Event> events;
+    ArrayList<com.example.dig4634_timely.Event> events;
 
-    public HourEvent(LocalTime time, ArrayList<Event> events)
+    public HourEvent(LocalTime time, ArrayList<com.example.dig4634_timely.Event> events)
     {
         this.time = time;
         this.events = events;
@@ -24,12 +24,12 @@ class HourEvent
         this.time = time;
     }
 
-    public ArrayList<Event> getEvents()
+    public ArrayList<com.example.dig4634_timely.Event> getEvents()
     {
         return events;
     }
 
-    public void setEvents(ArrayList<Event> events)
+    public void setEvents(ArrayList<com.example.dig4634_timely.Event> events)
     {
         this.events = events;
     }

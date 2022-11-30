@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".EventEditActivity">
+    tools:context=".EventEditActivity"
+    android:background="#CA965C">
 
     <TextView
         android:layout_width="wrap_content"
@@ -13,18 +14,25 @@
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:text="Name:"
+        android:fontFamily="sans-serif-black"
         android:textSize="20sp"
         android:textAlignment="center"
-        android:textColor="@color/black"/>
+        android:textColor="@color/white"/>
 
     <EditText
         android:id="@+id/eventNameET"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textSize="20sp"
+        android:backgroundTint="@color/white"
         android:ems="10"
-        android:inputType="text"/>
+        android:inputType="text"
+        android:textColor="@color/white"
+        android:textColorHighlight="@color/white"
+        android:textColorHint="@color/white"
+        android:textColorLink="@color/white"
+        android:textCursorDrawable="@color/white"
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/eventDateTV"
@@ -33,9 +41,10 @@
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:text="Date"
+        android:fontFamily="sans-serif-black"
         android:textSize="20sp"
         android:textAlignment="center"
-        android:textColor="@color/black"/>
+        android:textColor="@color/white"/>
 
     <TextView
         android:id="@+id/eventTimeTV"
@@ -44,20 +53,90 @@
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:text="Time"
+        android:fontFamily="sans-serif-black"
         android:textSize="20sp"
         android:textAlignment="center"
-        android:textColor="@color/black"/>
+        android:textColor="@color/white"/>
 
-    <Button
-        android:layout_marginTop="20dp"
+    <EditText
+        android:id="@+id/eventTimeET"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Save"
-        android:textColor="#B99976"
-        android:background="@null"
-        android:textStyle="bold"
-        android:onClick="saveEventAction"
         android:layout_gravity="center"
-        android:textSize="20sp"/>
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:inputType="text"
+        android:textColor="@color/white"
+        android:textColorHighlight="@color/white"
+        android:textColorHint="@color/white"
+        android:textColorLink="@color/white"
+        android:textCursorDrawable="@color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/lat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="Latitude"
+        android:fontFamily="sans-serif-black"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textColor="@color/white"/>
+
+    <EditText
+        android:id="@+id/latET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:inputType="text"
+        android:textColor="@color/white"
+        android:textColorHighlight="@color/white"
+        android:textColorHint="@color/white"
+        android:textColorLink="@color/white"
+        android:textCursorDrawable="@color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/lon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="Longitude"
+        android:fontFamily="sans-serif-black"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textColor="@color/white"/>
+
+    <EditText
+        android:id="@+id/lonET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:inputType="text"
+        android:textColor="@color/white"
+        android:textColorHighlight="@color/white"
+        android:textColorHint="@color/white"
+        android:textColorLink="@color/white"
+        android:textCursorDrawable="@color/white"
+        android:textSize="20sp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#876445"
+        android:onClick="saveEventAction"
+        android:text="Save"
+        android:textColor="#CA965C"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
 </LinearLayout>

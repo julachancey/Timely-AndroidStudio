@@ -70,27 +70,12 @@ import java.util.Locale;
             for(int hour = 0; hour < 24; hour++)
             {
                 LocalTime time = LocalTime.of(hour, 0);
-                ArrayList<com.example.dig4634_timely.Event> events = eventsForDateAndTime(selectedDate, time);
+                ArrayList<com.example.dig4634_timely.Event> events = com.example.dig4634_timely.Event.eventsForDateAndTime(selectedDate, time);
                 HourEvent hourEvent = new HourEvent(time, events);
                 list.add(hourEvent);
             }
 
             return list;
-        }
-
-        public ArrayList<com.example.dig4634_timely.Event> eventsForDateAndTime(LocalDate date, LocalTime time)
-        {
-            ArrayList<com.example.dig4634_timely.Event> events = new ArrayList<>();
-
-            for(com.example.dig4634_timely.Event event : eventsList)
-            {
-                int eventHour = event.getTime().getHour();
-                int cellHour = time.getHour();
-                if(event.getDate().equals(date) && eventHour == cellHour)
-                    events.add(event);
-            }
-
-            return events;
         }
 
         public void previousDayAction(View view)
